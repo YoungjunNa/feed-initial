@@ -8,6 +8,7 @@
 #' feed.search("alfalfa")
 
 feed.search <- function(keyword) {
+  stopifnot(require(rvest), require(dplyr), require(stringr))
   url <- paste0("https://www.feedipedia.org/search/node/",keyword)
   html <- read_html(url, encoding="UTF-8")
   

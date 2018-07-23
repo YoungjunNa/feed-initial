@@ -10,6 +10,9 @@
 #' feed.info("https://www.feedipedia.org/node/556")
 
 feed.info <- function(url){
+  # package
+  stopifnot(require(rvest), require(dplyr))
+
   html <- read_html(url, encoding="UTF-8")
 
   #names

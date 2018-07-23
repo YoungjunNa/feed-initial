@@ -9,10 +9,10 @@ feed.extract(url, n)
 \arguments{
 \item{url}{A URL that you want to scraping.}
 
-\item{n}{A number of list from feed.list().}
+\item{n}{A number of list from feed.info().}
 }
 \description{
-This function extract and re-combine the list from feed.list().
+This function extract and re-combine the list from feed.info().
 }
 \examples{
 feed.extract("https://www.feedipedia.org/node/556",2)

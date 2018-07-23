@@ -3,7 +3,6 @@
 #' This function show the result of tables of URL.
 #' @param url A URL that you want to scraping.
 #' @keywords feed, feedipedia
-#' @importFrom rvest dplyr stingr
 #' @export
 #' @examples
 #' feed.info("https://www.feedipedia.org/node/556")

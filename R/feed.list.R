@@ -3,7 +3,6 @@
 #' This function showed a feed list at feedipedia.org.
 #' @param category A category that you want to find(all; forage; plantProduct; animalOrigin; other)
 #' @keywords feed, feedipedia
-#' @importFrom rvest dplyr
 #' @export
 #' @examples
 #' feed.list(all)
@@ -14,7 +13,7 @@
 
 feed.list <- function(category="https://www.feedipedia.org/content/feeds?category=All") {
   # package
-  stopifnot(require(rvest), require(dplyr), require(stringr))
+  stopifnot(require(rvest), require(dplyr))
 
   # subsetting
   assign("all","https://www.feedipedia.org/content/feeds?category=All",envir = globalenv())

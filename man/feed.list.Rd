@@ -2,18 +2,22 @@
 % Please edit documentation in R/feed.list.R
 \name{feed.list}
 \alias{feed.list}
-\title{feed.search}
+\title{feed.list}
 \usage{
-feed.list(url)
+feed.list(category = "https://www.feedipedia.org/content/feeds?category=All")
 }
 \arguments{
-\item{url}{A URL that you want to scraping.}
+\item{category}{A category that you want to find(all; forage; plantProduct; animalOrigin; other)}
 }
 \description{
-This function show the result of tables of URL.
+This function showed a feed list at feedipedia.org.
 }
 \examples{
-feed.list("https://www.feedipedia.org/node/556")
+feed.list(all)
+feed.list(forage)
+feed.list(plantProduct)
+feed.list(animalOrigin)
+feed.list(other)
 }
 \keyword{feed,}
 \keyword{feedipedia}

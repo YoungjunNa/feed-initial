@@ -16,7 +16,7 @@ devtools::install_github("youngjunna/feed")
 
 ## Usage
 ### feed.search
-feed.search function shows the results of "feedipedia.org".     
+feed.search function shows the results you found at [feedipedia.org](https://www.feedipedia.org/).     
 
 ``` r
 library(feed)

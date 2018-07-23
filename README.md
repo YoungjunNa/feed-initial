@@ -15,22 +15,42 @@ devtools::install_github("youngjunna/feed")
 ```
 
 ## Usage
-### feed.search
-feed.search function shows the results you found at [feedipedia.org](https://www.feedipedia.org/).     
+### feed.list
+feed.list function shows the list of feeds of [feedipedia.org](https://www.feedipedia.org/).
 
 ``` r
 library(feed)
 
+# All feeds
+feed.list(category=all)
+
+# Forage plants
+feed.list(forage)
+
+# Plant products/by-products
+feed.list(plantProduct)
+
+# Feeds of animal origin
+feed.list(animalOrigin)
+
+# Other feeds
+feed.list(other)
+```
+
+### feed.search
+feed.search function shows the results you found at [feedipedia.org](https://www.feedipedia.org/).     
+
+``` r
 feed.search("maize")
 ```
 
-### feed.list
-feed.list function show the nutritive values of the specific feedstuff(url) in the form of a list.
+### feed.info
+feed.info function show the nutritive values of the specific feedstuff(url) in the form of a list.
 
 ``` r
 # The result of Maize germ meal and maize germ. url was found in the results of feed.search() function
 
-feed.search(url="https://www.feedipedia.org/node/716")
+feed.info(url="https://www.feedipedia.org/node/716")
 ```
 
 ### feed.extract

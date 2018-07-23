@@ -3,7 +3,7 @@ Title: Package
 Version: 0.0.0.9000
 Authors@R: person("Youngjun", "Na", email = "ruminoreticulum@gmail.com", role = c("aut", "cre"))
 Description: A package for the animal feed formulation.
-Depends: R (>= 3.4.4)
+Depends: R (>= 3.4.0)
 Imports: rvest, dplyr, stringr
 License: GLP-2
 URL: https://youngjunna.gitbooks.io, https://github.com/youngjunna/feed

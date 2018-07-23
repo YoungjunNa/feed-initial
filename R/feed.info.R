@@ -4,6 +4,8 @@
 #' @param url A URL that you want to scraping.
 #' @keywords feed, feedipedia
 #' @export
+#' @import rvest
+#' @import dplyr
 #' @examples
 #' feed.info("https://www.feedipedia.org/node/556")
 

@@ -3,6 +3,8 @@
 #' This function search a keyword at feedipedia.org.
 #' @param keyword A keyword that you want to find.
 #' @keywords feed, feedipedia
+#' @import rvest
+#' @import dplyr
 #' @export
 #' @examples
 #' feed.search("alfalfa")

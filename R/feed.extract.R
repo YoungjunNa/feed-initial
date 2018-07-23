@@ -6,6 +6,8 @@
 #' @keywords feed, feedipedia
 #' @export
 #' @examples
+#' @import rvest
+#' @import dplyr
 #' feed.extract("https://www.feedipedia.org/node/556",2)
 
 

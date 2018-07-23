@@ -3,6 +3,8 @@
 #' This function showed a feed list at feedipedia.org.
 #' @param category A category that you want to find(all; forage; plantProduct; animalOrigin; other)
 #' @keywords feed, feedipedia
+#' @import rvest
+#' @import dplyr
 #' @export
 #' @examples
 #' feed.list(all)

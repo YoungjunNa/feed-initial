@@ -9,7 +9,7 @@ feed is a package for animal feed formulation. It is comprised of 3 parts; 1) im
 ## Installation  
 
 ``` r
-# Or the the development version from GitHub:
+# The development version from GitHub:
 # install.packages("devtools")
 devtools::install_github("youngjunna/feed")
 ```

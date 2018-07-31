@@ -64,7 +64,7 @@ feed.extract(url="https://www.feedipedia.org/node/716",n=3)
 
 ## Dataset
 
-### feed.nrc.beef
+### feed.nrc.beef (Not available now)
 feed.nrc.beef function loads the feed informations from NRC beef 2016.
 
 ``` r

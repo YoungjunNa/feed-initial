@@ -5,9 +5,9 @@
 #' @param n A number of list from feed.info().
 #' @keywords feed, feedipedia
 #' @export
-#' @examples
 #' @import rvest
 #' @import dplyr
+#' @examples
 #' feed.extract("https://www.feedipedia.org/node/556",2)
 
 

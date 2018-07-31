@@ -1,6 +1,6 @@
 # feed
 ## Notification
-**<font color='red'>This package is under development.</font>**
+**This package is under development.**
 
 ## Overview
 

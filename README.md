@@ -68,7 +68,7 @@ as_is function convert dry-matter basis into as-is basis.
 
 ``` r
 df <- data.frame(nutrient=c("CP","NDF","EE","Ash"),composition=c(10,30,5,2))
-as_is(df$composition,85)
+as_is(composition=df$composition,dm=85,digits=2)
 ```
 
 ### d_m
@@ -76,7 +76,7 @@ d_m function convert as-is basis into dry-mater basis.
 
 ``` r
 df <- data.frame(nutrient=c("CP","NDF","EE","Ash"),composition=c(10,30,5,2))
-d_m(df$composition,85)
+d_m(composition=df$composition,dm=85,digits=2)
 ```
 
 ## Dataset

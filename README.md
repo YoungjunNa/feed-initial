@@ -82,7 +82,7 @@ d_m(composition=df$composition,dm=85,digits=2)
 ## Dataset
 
 ### feed.nrc.beef
-feed.nrc.beef function loads the feed informations from [BCNRM 2016](http://nutritionmodels.com/beef.html) (Drs. Noel Andy Cole, Clinton R. Krehbiel, Ronald P. Lemenager, and Galen E. Erickson, Drs. Joel Caton, Karen A. Beauchemin, Michael L. Galyean, Joan H. Eisemann, and Luis O. Tedeschi).
+feed.nrc.beef function loads the feed informations from [BCNRM 2016](http://nutritionmodels.com/beef.html) (Drs. Noel Andy Cole, Clinton R. Krehbiel, Ronald P. Lemenager, Galen E. Erickson, Drs. Joel Caton, Karen A. Beauchemin, Michael L. Galyean, Joan H. Eisemann, and Luis O. Tedeschi).
 
 ``` r
 feed.nrc.beef

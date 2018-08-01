@@ -9,7 +9,7 @@
 #' @import dplyr
 #' @examples
 #' feed.extract("https://www.feedipedia.org/node/556",2)
-
+#' 
 
 feed.extract <- function(url,n) {
   # package

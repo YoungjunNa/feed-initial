@@ -62,10 +62,27 @@ feed.extract function extract the nutritive values from the the list.
 feed.extract(url="https://www.feedipedia.org/node/716",n=3)
 ```
 
+## Conversion
+### as_is
+as_is function convert dry-matter basis into as-is basis.
+
+``` r
+df <- data.frame(nutrient=c("CP","NDF","EE","Ash"),composition=c(10,30,5,2))
+as_is(df$composition,85)
+```
+
+### d_m
+d_m function convert as-is basis into dry-mater basis.
+
+``` r
+df <- data.frame(nutrient=c("CP","NDF","EE","Ash"),composition=c(10,30,5,2))
+d_m(df$composition,85)
+```
+
 ## Dataset
 
-### feed.nrc.beef (Not available now)
-feed.nrc.beef function loads the feed informations from NRC beef 2016.
+### feed.nrc.beef
+feed.nrc.beef function loads the feed informations from [BCNRM 2016](http://nutritionmodels.com/beef.html) (Drs. Noel Andy Cole, Clinton R. Krehbiel, Ronald P. Lemenager, and Galen E. Erickson, Drs. Joel Caton, Karen A. Beauchemin, Michael L. Galyean, Joan H. Eisemann, and Luis O. Tedeschi).
 
 ``` r
 feed.nrc.beef

@@ -16,6 +16,7 @@ This function extract and re-combine the list from feed.info().
 }
 \examples{
 feed.extract("https://www.feedipedia.org/node/556",2)
+
 }
 \keyword{feed,}
 \keyword{feedipedia}

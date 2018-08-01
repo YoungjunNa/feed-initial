@@ -54,7 +54,7 @@ feed.info function show the nutritive values of the specific feedstuff(url) in t
 feed.info(url="https://www.feedipedia.org/node/716")
 ```
 
-### feed.extract
+#### feed.extract
 feed.extract function extract the nutritive values from the the list.
 
 ``` r
@@ -90,6 +90,8 @@ feed.nrc.beef
 
 #check the unit
 attributes(feed.nrc.beef)$unit
+#or
+str(feed.nrc.beef)
 ```
 
 ## Getting helps

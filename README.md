@@ -86,6 +86,9 @@ feed.nrc.beef function loads the feed informations from [BCNRM 2016](http://nutr
 
 ``` r
 feed.nrc.beef
+
+#check the unit
+attributes(feed.nrc.beef)$unit
 ```
 
 ## Getting helps

@@ -15,7 +15,8 @@ devtools::install_github("youngjunna/feed")
 ```
 
 ## Usage
-### feed.list
+### Feed information
+#### feed.list
 feed.list function shows the list of feeds of [feedipedia.org](https://www.feedipedia.org/).
 
 ``` r
@@ -37,14 +38,14 @@ feed.list(animalOrigin)
 feed.list(other)
 ```
 
-### feed.search
+#### feed.search
 feed.search function shows the results you found at [feedipedia.org](https://www.feedipedia.org/).     
 
 ``` r
 feed.search("maize")
 ```
 
-### feed.info
+#### feed.info
 feed.info function show the nutritive values of the specific feedstuff(url) in the form of a list.
 
 ``` r
@@ -62,8 +63,8 @@ feed.extract function extract the nutritive values from the the list.
 feed.extract(url="https://www.feedipedia.org/node/716",n=3)
 ```
 
-## Conversion
-### as_is
+### Conversion
+#### as_is
 as_is function convert dry-matter basis into as-is basis.
 
 ``` r
@@ -71,7 +72,7 @@ df <- data.frame(nutrient=c("CP","NDF","EE","Ash"),composition=c(10,30,5,2))
 as_is(composition=df$composition,dm=85,digits=2)
 ```
 
-### d_m
+#### d_m
 d_m function convert as-is basis into dry-mater basis.
 
 ``` r
@@ -79,10 +80,10 @@ df <- data.frame(nutrient=c("CP","NDF","EE","Ash"),composition=c(10,30,5,2))
 d_m(composition=df$composition,dm=85,digits=2)
 ```
 
-## Dataset
+### Dataset
 
-### feed.nrc.beef
-feed.nrc.beef function loads the feed informations from [BCNRM 2016](http://nutritionmodels.com/beef.html) (Drs. Noel Andy Cole, Clinton R. Krehbiel, Ronald P. Lemenager, Galen E. Erickson, Drs. Joel Caton, Karen A. Beauchemin, Michael L. Galyean, Joan H. Eisemann, and Luis O. Tedeschi).
+#### feed.nrc.beef
+feed.nrc.beef function loads the feed informations from [BCNRM 2016](http://nutritionmodels.com/beef.html) (Drs. Noel Andy Cole, Clinton R. Krehbiel, Ronald P. Lemenager, Galen E. Erickson, Joel Caton, Karen A. Beauchemin, Michael L. Galyean, Joan H. Eisemann, and Luis O. Tedeschi).
 
 ``` r
 feed.nrc.beef

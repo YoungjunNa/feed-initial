@@ -64,7 +64,7 @@ feed.extract(url="https://www.feedipedia.org/node/716",n=3)
 ```
 
 #### feed.compare
-feed.compare function compare each result of feed composition
+feed.compare function compares each result of feed composition.
 
 ``` r
 # extract the result

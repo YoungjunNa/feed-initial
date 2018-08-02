@@ -2,9 +2,11 @@
 
 export(as_is)
 export(d_m)
+export(feed.compare)
 export(feed.extract)
 export(feed.info)
 export(feed.list)
 export(feed.search)
 import(dplyr)
+import(plyr)
 import(rvest)

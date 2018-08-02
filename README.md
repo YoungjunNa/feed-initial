@@ -63,6 +63,22 @@ feed.extract function extract the nutritive values from the the list.
 feed.extract(url="https://www.feedipedia.org/node/716",n=3)
 ```
 
+#### feed.compare
+feed.compare function compare each result of feed composition
+
+``` r
+# extract the result
+feed1 <- feed.extract("https://www.feedipedia.org/node/556",2)
+feed2 <- eed.extract("https://www.feedipedia.org/node/556",3)
+
+# extract the main analysis results
+feed1 <- feed1[[1]]
+feed2 <- feed2[[1]]
+
+# compare the results
+feed.compare(feed1,feed2,name1="corn_europe",name2="corn_africa")
+```
+
 ### Conversion
 #### as_is
 as_is function convert dry-matter basis into as-is basis.

@@ -69,7 +69,7 @@ feed.compare function compare each result of feed composition
 ``` r
 # extract the result
 feed1 <- feed.extract("https://www.feedipedia.org/node/556",2)
-feed2 <- eed.extract("https://www.feedipedia.org/node/556",3)
+feed2 <- feed.extract("https://www.feedipedia.org/node/556",3)
 
 # extract the main analysis results
 feed1 <- feed1[[1]]

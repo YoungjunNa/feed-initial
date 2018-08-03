@@ -4,7 +4,7 @@
 
 ## Overview
 
-feed is a package for animal feed formulation. It is comprised of 3 parts; 1) import feedstuff information, 2) set nutrient requirement of animals, and 3) least-cost formulation.  
+feed is a package for animal feed formulation. It ~~is~~will be comprised of 3 parts; 1) import the feed data, 2) set nutrient requirement of the animal, and 3) least-cost formulation.  
 
 ## Installation  
 
@@ -17,7 +17,7 @@ devtools::install_github("youngjunna/feed")
 ## Usage
 ### Feed information
 #### feed.list
-feed.list function shows the list of feeds of [feedipedia.org](https://www.feedipedia.org/).
+```feed.list``` function shows the list of feeds of [feedipedia.org](https://www.feedipedia.org/).
 
 ``` r
 library(feed)
@@ -39,37 +39,33 @@ feed.list(other)
 ```
 
 #### feed.search
-feed.search function shows the results you found at [feedipedia.org](https://www.feedipedia.org/).     
+```feed.search``` function shows the results you found at [feedipedia.org](https://www.feedipedia.org/). When you find the result that you want, copy the url for scraping the feed data using ```feed.info``` function.      
 
 ``` r
 feed.search("maize")
 ```
 
 #### feed.info
-feed.info function show the nutritive values of the specific feedstuff(url) in the form of a list.
+```feed.info``` function shows the nutritive values of the specific feedstuff(url) in the form of a list. If you use extract option, a list is returned for each nutrient composition of the specific feed.
 
 ``` r
 # The result of Maize germ meal and maize germ. url was found in the results of feed.search() function
 
-feed.info(url="https://www.feedipedia.org/node/716")
-```
+# get the information about the url
+feed.info(url="https://www.feedipedia.org/node/556")
 
-#### feed.extract
-feed.extract function extract the nutritive values from the the list.
+# extract 2nd objects of nutrient composition dataset list.
+feed.info(url="https://www.feedipedia.org/node/556",extract=2)
 
-``` r
-# The result of "Maize germ meal, protein 20-30%, oil > 5%". url was found in the results of feed.search() function and n was found in feed.list() function (e.g. [[3]])
-
-feed.extract(url="https://www.feedipedia.org/node/716",n=3)
 ```
 
 #### feed.compare
-feed.compare function compares each result of feed composition.
+```feed.compare``` function compares each result of feed composition.
 
 ``` r
 # extract the result
-feed1 <- feed.extract("https://www.feedipedia.org/node/556",2)
-feed2 <- feed.extract("https://www.feedipedia.org/node/556",3)
+feed1 <- feed.info("https://www.feedipedia.org/node/556",2)
+feed2 <- feed.info("https://www.feedipedia.org/node/556",3)
 
 # extract the main analysis results
 feed1 <- feed1[[1]]
@@ -80,26 +76,40 @@ feed.compare(feed1,feed2,name1="corn_europe",name2="corn_africa")
 ```
 
 ### Conversion
-#### as_is
-as_is function convert dry-matter basis into as-is basis.
+#### dm_asis
+```dm_asis``` function converts dry-matter basis into as-is basis.
 
 ``` r
 df <- data.frame(nutrient=c("CP","NDF","EE","Ash"),composition=c(10,30,5,2))
-as_is(composition=df$composition,dm=85,digits=2)
+dm_asis(composition=df$composition,dm=85,digits=2)
 ```
 
-#### d_m
-d_m function convert as-is basis into dry-mater basis.
+#### asis_dm
+```asis_dm``` function converts as-is basis into dry-mater basis.
 
 ``` r
 df <- data.frame(nutrient=c("CP","NDF","EE","Ash"),composition=c(10,30,5,2))
-d_m(composition=df$composition,dm=85,digits=2)
+asis_dm(composition=df$composition,dm=85,digits=2)
+```
+
+#### j_cal
+```j_cal``` function converts joule into calorie.  
+
+``` r
+
+```
+
+#### cal_j
+```cal_j``` function converts calorie into joule.  
+
+``` r
+
 ```
 
 ### Dataset
 
 #### feed.nrc.beef (Not available now)
-feed.nrc.beef function loads the feed informations from [BCNRM 2016](http://nutritionmodels.com/beef.html) (Drs. Noel Andy Cole, Clinton R. Krehbiel, Ronald P. Lemenager, Galen E. Erickson, Joel Caton, Karen A. Beauchemin, Michael L. Galyean, Joan H. Eisemann, and Luis O. Tedeschi).
+```feed.nrc.beef``` loads the feed informations from [BCNRM 2016](http://nutritionmodels.com/beef.html) (Drs. Noel Andy Cole, Clinton R. Krehbiel, Ronald P. Lemenager, Galen E. Erickson, Joel Caton, Karen A. Beauchemin, Michael L. Galyean, Joan H. Eisemann, and Luis O. Tedeschi).
 
 ``` r
 feed.nrc.beef

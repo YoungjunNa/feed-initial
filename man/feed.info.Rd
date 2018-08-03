@@ -4,16 +4,19 @@
 \alias{feed.info}
 \title{feed.info}
 \usage{
-feed.info(url)
+feed.info(url, extract = 0)
 }
 \arguments{
 \item{url}{A URL that you want to scraping.}
+
+\item{extract}{A number of list for nutreint composition.}
 }
 \description{
-This function show the result of tables of URL.
+This function show the result of tables of URL. If you use extract option, a list is returned for each nutrient composition of the specific feed.
 }
 \examples{
-feed.info("https://www.feedipedia.org/node/556")
+feed.info(url="https://www.feedipedia.org/node/556")
+feed.info(url="https://www.feedipedia.org/node/556",extract=2)
 }
 \keyword{feed,}
 \keyword{feedipedia}

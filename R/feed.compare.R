@@ -6,7 +6,7 @@
 #' @param name1 1st feed name that you want to compare.
 #' @param name1 2nd feed name that you want to compare.
 #' @keywords feed formulation
-#' @import plyr
+#' @import dplyr
 #' @export
 #' @examples
 #'feed1 <- feed::feed.extract("https://www.feedipedia.org/node/556",2)
@@ -25,7 +25,7 @@ feed.compare <- function(feed1,feed2,name1="first",name2="second") {
   colnames(feed1) <- c("composition","unit",name1)
   colnames(feed2) <- c("composition",name2)
   
-  join <- plyr::join(feed1,feed2, by="composition")
+  join <- dplyr::left_join(feed1,feed2, by="composition")
   join$diff <- join[,3]-join[,4]
   join$percentage <- round(join[,4]/join[,3],3)
   

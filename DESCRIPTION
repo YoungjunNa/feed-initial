@@ -10,7 +10,6 @@ LazyData: true
 RoxygenNote: 6.0.1
 Imports: rvest,
     dplyr,
-    plyr
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr

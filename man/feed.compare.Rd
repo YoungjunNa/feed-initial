@@ -4,7 +4,8 @@
 \alias{feed.compare}
 \title{feed.compare}
 \usage{
-feed.compare(feed1, feed2, name1 = "first", name2 = "second")
+feed.compare(feed1, feed2, name1 = "first", name2 = "second",
+  radar = TRUE)
 }
 \arguments{
 \item{feed1}{1st feed chemical composition that you want to compare.}
@@ -13,17 +14,19 @@ feed.compare(feed1, feed2, name1 = "first", name2 = "second")
 
 \item{name1}{1st feed name that you want to compare.}
 
+\item{radar}{TRUE returns radar chart.}
+
 \item{name1}{2nd feed name that you want to compare.}
 }
 \description{
 A function to compare each result of feed composition.
 }
 \examples{
-feed1 <- feed::feed.extract("https://www.feedipedia.org/node/556",2)
-feed2 <- feed::feed.extract("https://www.feedipedia.org/node/556",3)
+feed1 <- feed::feed.info("https://www.feedipedia.org/node/556",2)
+feed2 <- feed::feed.info("https://www.feedipedia.org/node/674",3)
 feed1 <- feed1[[1]]
 feed2 <- feed2[[1]]
-feed.compare(feed1,feed2,name1="corn_europe",name2="corn_africa")
+feed.compare(feed1,feed2,name1="corn",name2="sbm",radar=TRUE)
 }
 \keyword{feed}
 \keyword{formulation}

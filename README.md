@@ -54,7 +54,7 @@ feed.search("maize")
 # get the information about the url
 feed.info(url="https://www.feedipedia.org/node/556")
 
-# extract 2nd objects of nutrient composition dataset list.
+# extract 2nd objects of nutrient composition dataset list
 feed.info(url="https://www.feedipedia.org/node/556",extract=2)
 
 ```
@@ -64,15 +64,15 @@ feed.info(url="https://www.feedipedia.org/node/556",extract=2)
 
 ``` r
 # extract the result
-feed1 <- feed.info("https://www.feedipedia.org/node/556",2)
-feed2 <- feed.info("https://www.feedipedia.org/node/556",3)
+feed1 <- feed::feed.info("https://www.feedipedia.org/node/556",2)
+feed2 <- feed::feed.info("https://www.feedipedia.org/node/674",3)
 
 # extract the main analysis results
 feed1 <- feed1[[1]]
 feed2 <- feed2[[1]]
 
 # compare the results
-feed.compare(feed1,feed2,name1="corn_europe",name2="corn_africa")
+feed.compare(feed1,feed2,name1="Corn",name2="SBM",radar=TRUE)
 ```
 
 ### Conversion

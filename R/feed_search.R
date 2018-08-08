@@ -1,4 +1,4 @@
-#' feed.search
+#' feed_search
 #'
 #' This function search a keyword at feedipedia.org.
 #' @param keyword A keyword that you want to find.
@@ -7,9 +7,9 @@
 #' @import dplyr
 #' @export
 #' @examples
-#' feed.search("alfalfa")
+#' feed_search("alfalfa")
 
-feed.search <- function(keyword) {
+feed_search <- function(keyword) {
   stopifnot(require(rvest), require(dplyr))
   keyword <- gsub(" ","%20",keyword)
   url <- paste0("https://www.feedipedia.org/search/node/",keyword)

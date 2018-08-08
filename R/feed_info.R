@@ -1,4 +1,4 @@
-#' feed.info
+#' feed_info
 #'
 #' This function show the result of tables of URL. If you use extract option, a list is returned for each nutrient composition of the specific feed.
 #' @param url A URL that you want to scraping.
@@ -8,10 +8,10 @@
 #' @import rvest
 #' @import dplyr
 #' @examples
-#' feed.info(url="https://www.feedipedia.org/node/556")
-#' feed.info(url="https://www.feedipedia.org/node/556",extract=2)
+#' feed_info(url="https://www.feedipedia.org/node/556")
+#' feed_info(url="https://www.feedipedia.org/node/556",extract=2)
 
-feed.info <- function(url,extract=0){
+feed_info <- function(url,extract=0){
   # package
   stopifnot(require(rvest), require(dplyr))
 

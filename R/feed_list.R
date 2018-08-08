@@ -1,4 +1,4 @@
-#' feed.list
+#' feed_list
 #'
 #' This function showed a feed list at feedipedia.org.
 #' @param category A category that you want to find(all; forage; plantProduct; animalOrigin; other)
@@ -7,13 +7,13 @@
 #' @import dplyr
 #' @export
 #' @examples
-#' feed.list(all)
-#' feed.list(forage)
-#' feed.list(plantProduct)
-#' feed.list(animalOrigin)
-#' feed.list(other)
+#' feed_list(all)
+#' feed_list(forage)
+#' feed_list(plantProduct)
+#' feed_list(animalOrigin)
+#' feed_list(other)
 
-feed.list <- function(category="https://www.feedipedia.org/content/feeds?category=All") {
+feed_list <- function(category="https://www.feedipedia.org/content/feeds?category=All") {
   # package
   stopifnot(require(rvest), require(dplyr))
 

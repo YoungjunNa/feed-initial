@@ -1,4 +1,4 @@
-# feed
+# feed <img src="man/figures/logo.png" align="right" />
 ## Notification
 **This package is under development.**
 

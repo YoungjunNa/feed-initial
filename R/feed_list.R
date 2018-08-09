@@ -17,7 +17,7 @@ feed_list<-function(category="all") {
   # package
   stopifnot(require(rvest), require(dplyr))
   
-  callsign<-c("all", "forage", "other", "plantProduct","anmalOrigin")
+  callsign<-c("all", "forage", "other", "plantProduct","animalOrigin")
   my.url.list <- c("https://www.feedipedia.org/content/feeds?category=All",
                    "https://www.feedipedia.org/content/feeds?category=15965",
                    "https://www.feedipedia.org/content/feeds?category=15969",

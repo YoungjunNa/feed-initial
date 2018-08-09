@@ -4,7 +4,7 @@
 \alias{feed_list}
 \title{feed_list}
 \usage{
-feed_list(category = "https://www.feedipedia.org/content/feeds?category=All")
+feed_list(category = "all")
 }
 \arguments{
 \item{category}{A category that you want to find(all; forage; plantProduct; animalOrigin; other)}
@@ -13,11 +13,11 @@ feed_list(category = "https://www.feedipedia.org/content/feeds?category=All")
 This function showed a feed list at feedipedia.org.
 }
 \examples{
-feed_list(all)
-feed_list(forage)
-feed_list(plantProduct)
-feed_list(animalOrigin)
-feed_list(other)
+feed_list("all")
+feed_list("forage")
+feed_list("plantProduct")
+feed_list("animalOrigin")
+feed_list("other")
 }
 \keyword{feed,}
 \keyword{feedipedia}

@@ -4,10 +4,9 @@
 
 ## Overview
 
-feed is a package for animal feed formulation. It ~~is~~will be comprised of 3 parts; 1) import the feed data, 2) set nutrient requirement of the animal, and 3) least-cost formulation.  
+feed is a system for getting the information of animal feeds. Basically, it can load, modify, and compare the animal feed dataset from Animal Feed Resources Information System (INRA CIRAD AFZ and FAO). ~~In addition, the inner dataset from NIAS, NRC, and CVB is loaded~~.   
 
 ## Installation  
-
 ``` r
 # The development version from GitHub:
 # install.packages("devtools")
@@ -23,19 +22,19 @@ devtools::install_github("youngjunna/feed")
 library(feed)
 
 # All feeds
-feed_list(category=all)
+feed_list(category="all")
 
 # Forage plants
-feed_list(forage)
+feed_list("forage")
 
 # Plant products/by-products
-feed_list(plantProduct)
+feed_list("plantProduct")
 
 # Feeds of animal origin
-feed_list(animalOrigin)
+feed_list("animalOrigin")
 
 # Other feeds
-feed_list(other)
+feed_list("other")
 ```
 
 #### feed_search
